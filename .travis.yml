@@ -10,12 +10,12 @@ env:
    # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
    #   via the "travis encrypt" command using the project repo's public key
    - secure: "EXwlXKkcxhKrIDt+pkxIluxNhLQAzBoV/u77X0zX4Bsqk54je31lsVODHGcXOrq1vUhY1F+j3Ngg8Ar40WkLYj70lq7rn3+5vCnIm4iPJVkKlyLWfCjYAPD6V2rnfHCD42oK2gwZDk648Eci5snWFX8AtN2N8Guka/SEvZrKdXfzlJ7CpNI0UWFjKIZf57iEaxcypKQrYNG+ISgP/M2fW2qEQqU0qwCI3yHNV/mkoeKrEjbbNbDYudU5wVAf4iRZzgSB1/mN09gJqc7zfiAYX2gl6lyECNr36cg/wZm60acYRtT4CTU+HiwiX3mEBdx3zz2Voc9IW9zjgGo2fwl17GAKL0YjMQvfZ59kVTDVqxBR9oe637cGr7G9W/U4lD+xsl26jAAeNXJGvo80wFRbm9IieWlPo6OAx3WV2gCYOBjlKbCL6IAvTs2U0op4cRXo/91Tb89BGrxa1fJ1+r5082c3Oy0NRrTebci0CnI37rwj0hzCFFT5FQZAb3MvNRGfklg62G1ly4y9aWlMw4uqxpeXa9GpOOz7w/gc/GowYLS/yzqe1/Hag7eHRLFrciQbe/jfzU/zrnX7UZpMVH6EyDTAWPNHlAhLtUiQ8Gc4J8z/97C6N/sjSEwFxo2b+9/tAeqNJknITiNLecVKDrEmPmWhjJ0rEt6Rg7g4ywZCkao="
-   
+
 addons:
   coverity_scan:
     project:
       name: "ph4r05/opensips"
       description: "SIP server implementation"
     notification_email: ph4r05@gmail.com
-    build_command:   make exclude_modules="db_oracle osp sngtc cachedb_cassandra cachedb_couchbase cachedb_mongodb" all
+    build_command: bash build-travis.sh
     branch_pattern: coverity_scan
