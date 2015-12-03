@@ -9,8 +9,8 @@ env:
   global:
    # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
    #   via the "travis encrypt" command using the project repo's public key
-   - secure: "ciiL1UL+60ZYIUN6r6R7lvcYO+Grm1tKT0/d2CShR10PgFXMtUDNL3RcvFC12daJAJCO88bnvfeae6tr5TCsBeyaGsPOqBWAfvrWh7bRFnRfmzB1NbKv6gmfXuEOqcgkKrasaMzT7rIfnI/obwddpZPfqc9tZlEacnA+RiqoGKHbFhHKm8XeZZh1TyJUFXeGdr84g5NMyLRveTfITMKOzJLqauVzmJBD8TTIEmvGAZ1xr8ul5VSsKGr46BBBRPLxHXGXMQUTsPuVjbiowxoyTNZzkDCoO9Gfcns5L+vmq7YJGXK943VZaVPsl4KOON5kq88SqRIf9MpR2e26hTjnqei1nEjFeVA8GIaLsZWRnEnYFOPnzKmrQ6JQj14s2eaDH2d3RN6tDXkfSJ5qxh4kY3q/hdhkfkyEMESx0CGUlDrSy5Pr74QePzuAXtvsoC/JGCgCoIg+AQ4CTdESSrEJ/Wc5AtC9TeymUs6Ek3KLCkr0OaAuf7ko+UN0D3F2LkmtfCKO0qcrVOb4Wyq+6Np5pHlpxNx5LbEdfzTM6mpQ3W5OFtsDPfezaJTixUZPX+Kq7TgUHI9BeQLTLcnUk++t+dCNdPStBvi1+dXX4HUvJB3/4xLI3CsKVkpH36dECC6G0IJPtZzt9dFQy8NgcE96EkSEGjkOhtCiyURthGJpbc0="
-
+   - secure: "EXwlXKkcxhKrIDt+pkxIluxNhLQAzBoV/u77X0zX4Bsqk54je31lsVODHGcXOrq1vUhY1F+j3Ngg8Ar40WkLYj70lq7rn3+5vCnIm4iPJVkKlyLWfCjYAPD6V2rnfHCD42oK2gwZDk648Eci5snWFX8AtN2N8Guka/SEvZrKdXfzlJ7CpNI0UWFjKIZf57iEaxcypKQrYNG+ISgP/M2fW2qEQqU0qwCI3yHNV/mkoeKrEjbbNbDYudU5wVAf4iRZzgSB1/mN09gJqc7zfiAYX2gl6lyECNr36cg/wZm60acYRtT4CTU+HiwiX3mEBdx3zz2Voc9IW9zjgGo2fwl17GAKL0YjMQvfZ59kVTDVqxBR9oe637cGr7G9W/U4lD+xsl26jAAeNXJGvo80wFRbm9IieWlPo6OAx3WV2gCYOBjlKbCL6IAvTs2U0op4cRXo/91Tb89BGrxa1fJ1+r5082c3Oy0NRrTebci0CnI37rwj0hzCFFT5FQZAb3MvNRGfklg62G1ly4y9aWlMw4uqxpeXa9GpOOz7w/gc/GowYLS/yzqe1/Hag7eHRLFrciQbe/jfzU/zrnX7UZpMVH6EyDTAWPNHlAhLtUiQ8Gc4J8z/97C6N/sjSEwFxo2b+9/tAeqNJknITiNLecVKDrEmPmWhjJ0rEt6Rg7g4ywZCkao="
+   
 addons:
   coverity_scan:
     project:
@@ -19,4 +19,3 @@ addons:
     notification_email: ph4r05@gmail.com
     build_command:   make exclude_modules="db_oracle osp sngtc cachedb_cassandra cachedb_couchbase cachedb_mongodb" all
     branch_pattern: coverity_scan
-    
