@@ -4,3 +4,19 @@ before_install:
     - sudo apt-get update -qq
     - sudo apt-get install -y libsqlite3-dev libsctp-dev libradiusclient-ng-dev libhiredis-dev unixodbc-dev libconfuse-dev libmysqlclient-dev libexpat1-dev libxml2-dev libpq-dev flex bison zlib1g-dev libperl-dev libsnmp-dev libdb-dev libldap2-dev libcurl4-gnutls-dev libgeoip-dev libpcre3-dev libmemcached-dev libmicrohttpd-dev librabbitmq-dev liblua5.1-dev libncurses5-dev libjson0-dev libmemcache-dev libxmlrpc-c3-dev
 script: make exclude_modules="db_oracle osp sngtc cachedb_cassandra cachedb_couchbase cachedb_mongodb" all
+
+env:
+  global:
+   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+   #   via the "travis encrypt" command using the project repo's public key
+   - secure: "ciiL1UL+60ZYIUN6r6R7lvcYO+Grm1tKT0/d2CShR10PgFXMtUDNL3RcvFC12daJAJCO88bnvfeae6tr5TCsBeyaGsPOqBWAfvrWh7bRFnRfmzB1NbKv6gmfXuEOqcgkKrasaMzT7rIfnI/obwddpZPfqc9tZlEacnA+RiqoGKHbFhHKm8XeZZh1TyJUFXeGdr84g5NMyLRveTfITMKOzJLqauVzmJBD8TTIEmvGAZ1xr8ul5VSsKGr46BBBRPLxHXGXMQUTsPuVjbiowxoyTNZzkDCoO9Gfcns5L+vmq7YJGXK943VZaVPsl4KOON5kq88SqRIf9MpR2e26hTjnqei1nEjFeVA8GIaLsZWRnEnYFOPnzKmrQ6JQj14s2eaDH2d3RN6tDXkfSJ5qxh4kY3q/hdhkfkyEMESx0CGUlDrSy5Pr74QePzuAXtvsoC/JGCgCoIg+AQ4CTdESSrEJ/Wc5AtC9TeymUs6Ek3KLCkr0OaAuf7ko+UN0D3F2LkmtfCKO0qcrVOb4Wyq+6Np5pHlpxNx5LbEdfzTM6mpQ3W5OFtsDPfezaJTixUZPX+Kq7TgUHI9BeQLTLcnUk++t+dCNdPStBvi1+dXX4HUvJB3/4xLI3CsKVkpH36dECC6G0IJPtZzt9dFQy8NgcE96EkSEGjkOhtCiyURthGJpbc0="
+
+addons:
+  coverity_scan:
+    project:
+      name: "ph4r05/opensips"
+      description: "SIP server implementation"
+    notification_email: ph4r05@gmail.com
+    build_command:   make exclude_modules="db_oracle osp sngtc cachedb_cassandra cachedb_couchbase cachedb_mongodb" all
+    branch_pattern: coverity_scan
+    
