@@ -17,5 +17,5 @@ addons:
       name: "ph4r05/opensips"
       description: "SIP server implementation"
     notification_email: ph4r05@gmail.com
-    build_command:   make exclude_modules="db_oracle osp sngtc cachedb_cassandra cachedb_couchbase cachedb_mongodb" all
+    build_command:   make exclude_modules='db_oracle osp sngtc cachedb_cassandra cachedb_couchbase cachedb_mongodb' all
     branch_pattern: coverity_scan_1_11
