@@ -48,5 +48,5 @@ addons:
       build_command: bash build-travis.sh
       branch_pattern: coverity_scan_1_11
 
-script: make exclude_modules="db_oracle osp sngtc cachedb_cassandra cachedb_couchbase cachedb_mongodb" all
+script: make exclude_modules="db_oracle osp sngtc cachedb_cassandra cachedb_couchbase cachedb_mongodb mi_xmlrpc" all
 
