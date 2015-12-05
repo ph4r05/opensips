@@ -38,7 +38,8 @@ addons:
             - libncurses5-dev
             - libjson0-dev
             - libmemcache-dev
-            
+            - libxmlrpc-c3-dev
+
     coverity_scan:
       project:
         name: "ph4r05/opensips"
