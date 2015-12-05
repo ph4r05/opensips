@@ -264,7 +264,7 @@ db_con_t* db_do_init(const str* url, void* (*new_connection)())
 		return 0;
 	}
 
-	int con_size = sizeof(db_con_t) + sizeof(void *) + url->len;
+	con_size = sizeof(db_con_t) + sizeof(void *) + url->len;
 	if (url->len > MAX_URL_LENGTH)
 	{
 		LM_ERR("SQL URL too long\n");
